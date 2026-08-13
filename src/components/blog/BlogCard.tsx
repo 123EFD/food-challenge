@@ -10,6 +10,7 @@ export function BlogCard({ article }: { article: any }) {
         <div className="blog-meta">
           <p className="transport-info">🚆 {article.transportInfo}</p>
           <a href={article.mapLink} target="_blank" rel="noopener noreferrer" className="map-link">📍 Google Maps</a>
+          {article.priceRange && <p className="price-tag">💰 {article.priceRange}</p>}
         </div>
       </div>
     </article>

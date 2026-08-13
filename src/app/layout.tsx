@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"], variable: '--font-body' });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: '--font-heading' });
+const shareTechMono = Share_Tech_Mono({ weight: '400', subsets: ["latin"], variable: '--font-body' });
 
 export const metadata: Metadata = {
   title: "Perfect Landing: Comfort Food | Malaysian Traditional Food",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable}`}>
+      <body className={shareTechMono.className} style={{ '--font-heading': 'var(--font-body)' } as React.CSSProperties}>
         <Navbar />
         {children}
       </body>

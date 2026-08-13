@@ -313,8 +313,34 @@ footer {
 }
 
 /* Blog Page Styles */
+.blog-dynamic-bg {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background-image 1s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.blog-dynamic-bg::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  /* Light mode overlay - white/greyish to let the image show through subtly */
+  background: rgba(236, 237, 231, 0.7); 
+  z-index: -1;
+  pointer-events: none;
+  transition: background 0.4s ease;
+}
+
+[data-theme="dark"] .blog-dynamic-bg::before {
+  /* Dark mode overlay - much darker so text is readable */
+  background: rgba(0, 0, 0, 0.85); 
+}
+
 .blog-page {
   padding-top: 100px;
+  min-height: 100vh;
 }
 
 .blog-header {
@@ -499,4 +525,20 @@ footer {
 
 .blog-meta .map-link:hover {
   color: var(--primary-color);
+}
+
+.price-tag {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.featured-price {
+  background: var(--secondary-color);
+  color: var(--text-color);
 }
