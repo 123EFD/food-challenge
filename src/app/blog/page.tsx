@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { BlogFeaturedPost } from '@/components/blog/BlogFeaturedPost';
 import { BlogCard } from '@/components/blog/BlogCard';
+import { CommentSection } from '@/components/blog/CommentSection';
 
 const featuredArticle = {
   id: "article-1",
@@ -136,6 +137,8 @@ export default function Blog() {
              </div>
           </aside>
         </section>
+
+        <CommentSection />
       </main>
       
       <footer className="glass-container">
