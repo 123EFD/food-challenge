@@ -102,13 +102,39 @@ export default function Blog() {
           <BlogFeaturedPost article={featuredArticle} />
         </section>
 
-        <section className="blog-grid-section">
-
+        <section className="blog-main-content">
           <div className="blog-grid">
             {articles.map((article) => (
               <BlogCard key={article.id} article={article} />
             ))}
           </div>
+
+          <aside className="blog-sidebar">
+             <div className="sticky-note">
+                <h3>📌 Commuter's Toolkit</h3>
+                <p>Must-have apps for navigating public transport!</p>
+                <div className="sticky-note-content">
+                  <ul>
+                    <li>
+                      <strong>myrapid PULSE:</strong> <br/>
+                      <a href="https://myrapid.com.my/pulse/mobile-app/" target="_blank" rel="noopener noreferrer">View schedules</a>
+                    </li>
+                    <li>
+                      <strong>Rapid On Demand:</strong> <br/>
+                      <a href="https://myrapid.com.my/bus-train/rapid-kl/on-demand/" target="_blank" rel="noopener noreferrer">Book rides</a>
+                    </li>
+                    <li>
+                      <strong>GOKL App:</strong> <br/>
+                      <a href="https://share.google/SM4HxbFVW9M8FLa3j" target="_blank" rel="noopener noreferrer">App Store</a> | <a href="https://share.google/vkVrUz22xe80PwgGc" target="_blank" rel="noopener noreferrer">Google Play</a>
+                    </li>
+                    <li>
+                      <strong>RapidKL Live Map:</strong> <br/>
+                      <a href="https://share.google/s6rHRgVdWqmdhrDco" target="_blank" rel="noopener noreferrer">Track buses live</a>
+                    </li>
+                  </ul>
+                </div>
+             </div>
+          </aside>
         </section>
       </main>
       

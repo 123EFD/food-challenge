@@ -466,11 +466,99 @@ footer {
   color: #fff;
 }
 
+.blog-main-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
 .blog-grid {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
-  margin-bottom: 60px;
+}
+
+.blog-sidebar {
+  width: 320px;
+  position: sticky;
+  top: 120px;
+}
+
+/* Sticky Note UI */
+.sticky-note {
+  background: #fdf6c3; /* Soft yellow paper color */
+  color: #222;
+  padding: 25px 25px 35px 25px;
+  box-shadow: 3px 5px 15px rgba(0,0,0,0.3);
+  transform: rotate(1.5deg);
+  position: relative;
+  border-radius: 2px 2px 25px 5px;
+  transition: transform 0.3s ease;
+}
+
+.sticky-note:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.sticky-note::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 120px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.sticky-note h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #d13030;
+  border-bottom: 2px dashed rgba(0,0,0,0.2);
+  padding-bottom: 8px;
+}
+
+.sticky-note-content {
+  background-image: repeating-linear-gradient(transparent, transparent 27px, rgba(0, 150, 255, 0.15) 27px, rgba(0, 150, 255, 0.15) 28px);
+  line-height: 28px;
+  margin-top: 10px;
+}
+
+.sticky-note ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sticky-note li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.sticky-note a {
+  color: #0056b3;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.sticky-note a:hover {
+  color: #d13030;
+}
+
+@media (max-width: 900px) {
+  .blog-main-content {
+    flex-direction: column;
+  }
+  .blog-sidebar {
+    width: 100%;
+    position: static;
+    margin-top: 40px;
+  }
 }
 
 .blog-card {
