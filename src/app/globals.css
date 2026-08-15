@@ -305,10 +305,79 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Mobile Navbar & Controls */
+.mobile-controls {
+  display: none;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-menu-toggle {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  font-size: 1.25rem;
+  color: var(--text-color);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.mobile-menu-toggle:hover {
+  background: var(--primary-color);
+  color: var(--color-putih);
+  transform: scale(1.05);
+}
+
+.mobile-nav-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1001;
+  animation: mobileDropdownSlide 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.mobile-nav-dropdown a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 12px 18px;
+  border-radius: 14px;
+  transition: var(--transition-smooth);
+  display: block;
+}
+
+.mobile-nav-dropdown a:hover {
+  background: rgba(243, 86, 91, 0.18);
+  color: var(--primary-color);
+  padding-left: 22px;
+}
+
+@keyframes mobileDropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
   .hero-content h1 { font-size: 2.5rem; }
   .hero-content { padding: 30px 20px; }
-  .nav-links { display: none; }
+  .desktop-nav { display: none; }
+  .mobile-controls { display: flex; }
   .carousel-btn { display: none; } /* Hide buttons on mobile, let them swipe */
 }
 
@@ -734,3 +803,268 @@ footer {
   font-size: 1.05rem;
   line-height: 1.5;
 }
+
+/* Subscribe Buttons & Floating Pill */
+.nav-subscribe-btn {
+  background: rgba(243, 86, 91, 0.15);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.nav-subscribe-btn:hover {
+  background: var(--primary-color);
+  color: var(--color-putih);
+  transform: translateY(-2px);
+}
+
+.hero-floating-subscribe {
+  position: absolute;
+  top: 90px;
+  left: 5%;
+  z-index: 10;
+}
+
+.floating-subscribe-pill {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  animation: floatPill 3s ease-in-out infinite;
+}
+
+.floating-subscribe-pill:hover {
+  background: var(--primary-color);
+  color: var(--color-putih);
+  transform: translateY(-3px) scale(1.03);
+}
+
+@keyframes floatPill {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.hero-btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--color-hitam);
+  border: none;
+  box-shadow: 0 4px 15px rgba(245, 187, 54, 0.4);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--color-putih);
+}
+
+/* Subscribe Section Card */
+.subscribe-section {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+}
+
+.subscribe-card {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.subscribe-text h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.subscribe-text p {
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+.subscribe-card-btn {
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Subscribe Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2000;
+  animation: fadeInModal 0.25s ease forwards;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  padding: 35px 30px;
+  text-align: center;
+  animation: popInModal 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.modal-icon {
+  font-size: 3rem;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.modal-header h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.modal-header p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.subscribe-input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: var(--font-body);
+  transition: var(--transition-smooth);
+}
+
+[data-theme="dark"] .subscribe-input {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.subscribe-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(243, 86, 91, 0.2);
+}
+
+.subscribe-submit-btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-privacy {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 15px;
+}
+
+.modal-success-icon {
+  font-size: 3.5rem;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.modal-success h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.modal-success p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-floating-subscribe {
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+  }
+  .floating-subscribe-pill {
+    justify-content: center;
+    width: 100%;
+  }
+  .subscribe-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .subscribe-card-btn {
+    width: 100%;
+  }
+}
+

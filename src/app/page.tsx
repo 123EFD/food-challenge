@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Carousel from '@/components/Carousel';
+import SubscribeModal from '@/components/SubscribeModal';
 
 export default function Home() {
   const heroImages = [
@@ -21,16 +22,18 @@ export default function Home() {
 
   return (
     <>
-
       <header 
         className="hero" 
         id="home"
         style={{ backgroundImage: `url('${heroImages[currentBg]}')` }}
       >
+
         <div className="hero-content glass-container">
           <h1 style={{ fontFamily: 'var(--font-heading)' }}>The Soul of Malaysia</h1>
           <p>Experience the ultimate comfort food. A harmonious blend of Malay, Chinese, and Indian flavors that warms the heart and soul.</p>
-          <a href="#featured" className="btn">Discover the Flavors</a>
+          <div className="hero-btn-group">
+            <a href="#featured" className="btn">Discover the Flavors</a>
+          </div>
         </div>
       </header>
 
@@ -38,6 +41,20 @@ export default function Home() {
         <section id="featured" className="featured-section">
           <h2 className="section-title" style={{ fontFamily: 'var(--font-heading)' }}>Iconic Comfort Foods</h2>
           <Carousel />
+        </section>
+
+        {/* Subscribe Callout Section */}
+        <section className="subscribe-section">
+          <div className="subscribe-card glass-container">
+            <div className="subscribe-text">
+              <h3 style={{ fontFamily: 'var(--font-heading)' }}>Craving New Makan Spots?</h3>
+              <p>Subscribe to receive our latest curated guides on hidden, transit-friendly food gems across Malaysia.</p>
+            </div>
+            <SubscribeModal 
+              buttonClassName="btn subscribe-card-btn" 
+              buttonLabel="🔔 Subscribe Now" 
+            />
+          </div>
         </section>
       </main>
 
