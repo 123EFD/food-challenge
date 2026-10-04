@@ -91,7 +91,7 @@ const articles = [
     title: "Ming Kee Porridge SS2 ",
     summary: "Even though their main dish is porridges, I will rather prefer to try their stir-fried spring bean which is full of wokhay. The portion is also big enough for one people.",
     category: "Wok & Stir-fry",
-    thumbnailUrl: "/images/Stir-Fried-Spring-Bean.jpg",
+    thumbnailUrl: "/images/Stir-fried-springbean.jpg",
     transportInfo: "From LRT Taman Jaya, ride PJ City Bus (PJ02) to Komersial SS2 (Poh Kong) bus stop. Walk straight to OH YEAH then turn left to the alley.Walk to the MCD and cross the road.The restaurant is at the end of the shop lot. It is located near Watson.",
     mapLink: "https://maps.app.goo.gl/bUsrcRGkBBnoxLZd6",
     priceRange: "RM 13- RM 40"
