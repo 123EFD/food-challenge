@@ -20,6 +20,7 @@ export default function Navbar() {
         <Link href="/#home">Home</Link>
         <Link href="/#featured">Dishes</Link>
         <Link href="/blog">Blog</Link>
+        <Link href="/anything-lah" style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>Anything Lah! 🎯</Link>
         <ThemeToggle />
       </div>
 
@@ -42,6 +43,7 @@ export default function Navbar() {
           <Link href="/#home" onClick={closeMenu}>Home</Link>
           <Link href="/#featured" onClick={closeMenu}>Dishes</Link>
           <Link href="/blog" onClick={closeMenu}>Blog</Link>
+          <Link href="/anything-lah" onClick={closeMenu} style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>Anything Lah! 🎯</Link>
         </div>
       )}
     </nav>

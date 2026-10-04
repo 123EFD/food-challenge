@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Carousel from '@/components/Carousel';
 import SubscribeModal from '@/components/SubscribeModal';
 
@@ -33,6 +34,9 @@ export default function Home() {
           <p>Experience the ultimate comfort food. A harmonious blend of Malay, Chinese, and Indian flavors that warms the heart and soul.</p>
           <div className="hero-btn-group">
             <a href="#featured" className="btn">Discover the Flavors</a>
+            <Link href="/anything-lah" className="btn btn-secondary">
+              🎯 &quot;Anything Lah!&quot; Decider (AI)
+            </Link>
           </div>
         </div>
       </header>
@@ -41,6 +45,26 @@ export default function Home() {
         <section id="featured" className="featured-section">
           <h2 className="section-title" style={{ fontFamily: 'var(--font-heading)' }}>Iconic Comfort Foods</h2>
           <Carousel />
+        </section>
+
+        {/* Hacktoberfest Feature Callout: Anything Lah! */}
+        <section className="featured-section" style={{ paddingTop: '0' }}>
+          <div className="glass-container anything-lah-callout">
+            <div className="callout-content">
+              <span className="badge-tag">HACKTOBERFEST 2026: BUILD FOR A FRIEND</span>
+              <h2 style={{ fontFamily: 'var(--font-heading)', marginTop: '10px' }}>
+                Friend Says &quot;Anything Lah&quot; Again?
+              </h2>
+              <p>
+                Put an end to 30-minute lunch arguments. Powered by in-browser open-weight transformers (<code>Xenova/all-MiniLM-L6-v2</code>), our AI analyzes their unarticulated cravings, transit laziness, and budget to hand down an uncompromising food verdict.
+              </p>
+              <div style={{ marginTop: '20px' }}>
+                <Link href="/anything-lah" className="btn">
+                  🎯 Try &quot;Anything Lah!&quot; Destroyer
+                </Link>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Subscribe Callout Section */}

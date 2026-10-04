@@ -10,7 +10,10 @@ const dishes = [
   { img: '/images/Fish-Cake-Noodles-@-He-Kiaw-Mee.jpg', title: 'He Kiaw Mee', desc: 'Springy noodles served with fish cakes, fish balls, and a savory broth, offering a delightful and comforting taste.' },
   { img: '/images/Sang-Har-Mee.jpg', title: 'Sang Har Mee', desc: 'Freshwater prawns cooked in a rich, eggy gravy served over crispy fried noodles. A luxurious and satisfying noodle dish.' },
   { img: '/images/Sweet-Red-Sauce-Chee-Cheong-Fun.jpg', title: 'Chee Cheong Fun', desc: 'Steamed rice noodle rolls served with a distinct, sweet red sauce, chili paste, and a sprinkle of toasted sesame seeds.' },
-  { img: '/images/bah-kut-teh-and-Black-Vinegar-Pork-Trotter.jpg', title: 'Bak Kut Teh', desc: 'A hearty, complex herbal soup with meaty pork ribs simmered for hours, often enjoyed with black vinegar pork trotters.' }
+  { img: '/images/bah-kut-teh-and-Black-Vinegar-Pork-Trotter.jpg', title: 'Bak Kut Teh', desc: 'A hearty, complex herbal soup with meaty pork ribs simmered for hours, often enjoyed with black vinegar pork trotters.' },
+  { img: '/images/Saizeriya_Maluri.jpg', title: 'Spaghetti beef bolognese in Saizeriya Aeon Mall in Maluri ', desc: 'Besides being a classic Italian dish with dirt cheap price, this one is a delicious twist on the traditional bolognese sauce with cheesy power spread over the noodles. The downside is that it is too little portion for one person.' },
+  { img: '/images/SS15-Wongzi-Noodle.jpg', title: 'Ipoh Kai Si Hor Fun in SS15 Wongzi Noddle ', desc: 'Very rich shrimp-flavored noodle soup with juicy prawn meat. You can add on prawn oil, fried shallots, kuchai and so on without any additional cost.' },
+  { img: '/images/Stir-fried-springbean.jpg.jpg', title: 'Stir fried springbean in Ming Kee Porridge SS2 ', desc: 'Even though their main dish is porridges, I will rather prefer to try their stir-fried spring bean which is full of wokhay. The portion is also big enough for one people.' },
 ];
 
 export default function Carousel() {
