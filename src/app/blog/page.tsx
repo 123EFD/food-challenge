@@ -64,7 +64,37 @@ const articles = [
     thumbnailUrl: "/images/bah-kut-teh-and-Black-Vinegar-Pork-Trotter.jpg",
     transportInfo: "A 8-minute straight walk from LRT USJ 7. The mall is beside the senQ Easyhome.",
     mapLink: "https://maps.google.com/?q=Summit+USJ+Mall",
-    priceRange: "RM 15 - RM 25"
+    priceRange: "RM 11 - RM 25"
+  },
+  {
+    id: "article-7",
+    title: "Saizeriya Maluri's Spaghetti Beef Bolognese",
+    summary: "Besides being a classic Italian dish with dirt cheap price, this one is a delicious twist on the traditional bolognese sauce with cheesy power spread over the noodles. The downside is that it is too little portion for one person.",
+    category: "Dinner Delights",
+    thumbnailUrl: "/images/Saizeriya_Maluri.jpg",
+    transportInfo: "It took around 40-50 minutes for me to reach this restaurant from LRT University then change lines to Maluri. The restaurant is located on the 2nd floor of the mall.",
+    mapLink: "https://maps.app.goo.gl/etHMQdsVby3E9Vr66",
+    priceRange: "RM 5 - RM 30"
+  },
+  {
+    id: "article-8",
+    title: "SS15 Wongzi Noodle's Ipoh Kai Si Hor Fun",
+    summary: "Very rich shrimp-flavored noodle soup with juicy prawn meat. You can add on prawn oil, fried shallots, kuchai and so on without any additional cost.",
+    category: "Noodles",
+    thumbnailUrl: "/images/SS15-Wongzi-Noodle.jpg",
+    transportInfo: "Stop at SS15 LRT station, then just walk stright from the Big Family Restaurant, around 10~15 minutes walk you will arrive at the restaurant.",
+    mapLink: "https://maps.app.goo.gl/rtmKHxX8yZmxdiHY8",
+    priceRange: "RM 10- RM 30"
+  },
+  {
+    id: "article-9",
+    title: "Ming Kee Porridge SS2 ",
+    summary: "Even though their main dish is porridges, I will rather prefer to try their stir-fried spring bean which is full of wokhay. The portion is also big enough for one people.",
+    category: "Wok & Stir-fry",
+    thumbnailUrl: "/images/Stir-Fried-Spring-Bean.jpg",
+    transportInfo: "From LRT Taman Jaya, ride PJ City Bus (PJ02) to Komersial SS2 (Poh Kong) bus stop. Walk straight to OH YEAH then turn left to the alley.Walk to the MCD and cross the road.The restaurant is at the end of the shop lot. It is located near Watson.",
+    mapLink: "https://maps.app.goo.gl/bUsrcRGkBBnoxLZd6",
+    priceRange: "RM 13- RM 40"
   }
 ];
 
